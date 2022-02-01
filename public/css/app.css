@@ -1,1 +1,36 @@
 /* Add your styles here. */
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #d3b19c;
+}
+
+.post-header {
+    text-align: left;
+}
+
+.post-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: stretch;
+    gap: 10px;
+    padding: 0;
+}
+
+.post {
+    display: flex;
+    flex-basis: 100%;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+@media (min-width: 600px) {
+    .post {
+        flex-basis: calc(33% - 20px);
+    }
+}
+
+.post-image {
+    object-fit: cover;
+    height: 200px;
+}
+
