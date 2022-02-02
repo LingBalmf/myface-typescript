@@ -15,7 +15,22 @@
         </div>
     </div>
 </div>
-          
+
+<h2><%= name %>'s posts</h2>
+    <ol>
+    <% posts.forEach(function(post) {%>
+        <li>
+            <img
+                src="<%= post.imageUrl %>"
+                 alt="<%= post.message %>"
+                 width="50"
+                 height="50"
+                    />
+           <p> <%= post.message %> </p>
+        </li>
+    <% }); %>
+</ol>
+      
 
 </body>
 <%- include('_footer') -%>

@@ -13,6 +13,17 @@
                  height="50"
                     />
            <p> <%= post.message %> </p>
+           <p>Post by <%= post.postedBy.name %> (<%= post.postedBy.username %>) at <%= post.createdAt %></p>
+           <% if(post.likedBy.length > 0) { %>
+            <p>
+                <%= post.likedBy.length %> likes:
+                <ul>
+                    <% post.likedBy.forEach(function(user) {%>
+                        <li><%= user.name %></li>
+                    <% }); %>
+                </ul>
+            </p>
+            <% } %>
         </li>
     <% }); %>
 </ol>
