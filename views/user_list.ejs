@@ -3,14 +3,14 @@
 <%- include('_header') -%>
 <body>
 <h1 class="post-header">Users</h1>
-<ol class="post-container">
+<ol class ="post-container">
     <% results.forEach(function(user) {%>
         <li class="post">
             <img class="post-image"
-            src="<%= user.profileImageUrl %>"
+            src="<%= user.profileImageUrl %>" 
                  <%= user.name %>
                     />
-        <p class=post-user> <%= user.name %></p>
+        <p><a href="/users/<%= user.id %>"><%= user.name %></a></p>
         
         </li>
     <% }); %>
