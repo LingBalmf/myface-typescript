@@ -2,6 +2,7 @@
 <%- include('_head') -%>
 <%- include('_header') -%>
 <body>
+<button id="my-colour-button" class="colourable" type="button">Change Colour</button>
 <h1 class="post-header">Users</h1>
 <ol class ="post-container">
     <% results.forEach(function(user) {%>
@@ -10,7 +11,9 @@
             src="<%= user.profileImageUrl %>" 
                  <%= user.name %>
                     />
-        <p><a href="/users/<%= user.id %>"><%= user.name %></a></p>
+        <p>
+            <a href="/users/<%= user.id %>"><%= user.name %></a>
+        </p>
         
         </li>
     <% }); %>

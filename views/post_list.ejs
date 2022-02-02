@@ -2,15 +2,14 @@
 <%- include('_head') -%>
 <%- include('_header') -%>
 <body>
+     <button id="my-colour-button" class="colourable" type="button">Change Colour</button>
 <h1 class="post-header">Posts</h1>
-<ol>
+<ol class="post-container">
     <% results.forEach(function(post) {%>
-        <li>
-            <img
+        <li class="post">
+            <img class="post-image"
             src="<%= post.imageUrl %>"
                  alt="<%= post.message %>"
-                 width="50"
-                 height="50"
                     />
            <p> <%= post.message %> </p>
            <p>Post by <%= post.postedBy.name %> (<%= post.postedBy.username %>) at <%= post.createdAt %></p>
