@@ -2,11 +2,11 @@
 <%- include('_head') -%>
 <%- include('_header') -%>
 <body>
-     <button id="my-colour-button" class="colourable" type="button">Change Colour</button>
+     <button id="my-colour-button" class="post-info" type="button">Change Colour</button>
 <h1 class="post-header">Posts</h1>
 <ol class="post-container">
     <% results.forEach(function(post) {%>
-        <li class="post">
+        <li class="post-info">
             <img class="post-image"
             src="<%= post.imageUrl %>"
                  alt="<%= post.message %>"
